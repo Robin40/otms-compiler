@@ -1,0 +1,107 @@
+name: 2 pow n
+init: q0
+accept: q21
+// Inicializar
+q0, _, _
+q1, _, _, >, -
+
+q1, _, _
+q2, _, _, -, -
+
+q1, I, _
+q1, I, _, >, -
+
+
+//Copia 1 en 2
+q2,_,_
+q3,_,_,<,<
+
+q3,I,_
+q3,I,I,<,<
+
+q3,_,_
+q4,_,_,>,>
+
+//Me devuelvo por protocolo
+q4, _, _
+q5, _,_,-,-
+
+q4, I, I
+q4, I, I, >, >
+
+//Borro
+q5,_,_
+q6,_,_,<,-
+
+q6,I,_
+q6,_,_,<,-
+
+q6,_,_
+q7,_,_,-,-
+
+//escribo 1
+
+q7,_,_
+q8,I,_,>,-
+
+//If
+q8,_,_
+q9,_,_,<,<
+
+//Si hay un 1 en la segunda borro ese 1 y me quedo donde estoy
+q9,I,I
+q10,I,_,>,-
+
+//Copiadora
+q10,_,_
+q11,_,_,<,-
+
+q10,I,_
+q11,I,_,<,-
+
+//Si hay un 1
+q11,I,_
+q12,_,_,-,-
+
+//borro y busco un gato
+q12, _, _
+q13, _, _, >, -
+
+q13, _, _
+q14, _, _, -, -
+
+q13, I, _
+q13, I, _, >, -
+
+// escribo e1
+q14,_,_
+q15,I,_,>,-
+
+//busco gato a la izquierda
+q15, _, _
+q16, _, _, <, -
+
+q16, _, _
+q17, _, _, -, -
+
+q16, I, _
+q16, I, _, <, -
+
+//escribo un 1
+q17,_,_
+q10,I,_,-,-
+
+q11, _, _
+q19, _, _, >, -
+
+q19, _, _
+q20, _, _, -, -
+
+q19, I, _
+q19, I, _, >, -
+
+q20,_,_
+q8,_,_,-,-
+
+q9,I,_
+q21,I,_,>,-
